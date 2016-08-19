@@ -23,6 +23,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'users/show'
-    assert_select ".alert-success", true, "Flash is not present"
+    assert is_logged_in?
   end
 end
